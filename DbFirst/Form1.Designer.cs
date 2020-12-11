@@ -82,10 +82,10 @@ namespace DbFirst
             // 
             // lblQueryDetail
             // 
-            this.lblQueryDetail.AutoSize = true;
-            this.lblQueryDetail.Location = new System.Drawing.Point(7, 22);
+            this.lblQueryDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblQueryDetail.Location = new System.Drawing.Point(3, 18);
             this.lblQueryDetail.Name = "lblQueryDetail";
-            this.lblQueryDetail.Size = new System.Drawing.Size(0, 14);
+            this.lblQueryDetail.Size = new System.Drawing.Size(322, 80);
             this.lblQueryDetail.TabIndex = 0;
             // 
             // gbQueries
@@ -135,6 +135,7 @@ namespace DbFirst
             this.btnQuery6.TabIndex = 0;
             this.btnQuery6.Text = "Query6";
             this.btnQuery6.UseVisualStyleBackColor = true;
+            this.btnQuery6.Click += new System.EventHandler(this.btnQuery6_Click);
             // 
             // btnQuery10
             // 
@@ -153,6 +154,7 @@ namespace DbFirst
             this.btnQuery5.TabIndex = 0;
             this.btnQuery5.Text = "Query5";
             this.btnQuery5.UseVisualStyleBackColor = true;
+            this.btnQuery5.Click += new System.EventHandler(this.btnQuery5_Click);
             // 
             // btnQuery9
             // 
@@ -171,6 +173,7 @@ namespace DbFirst
             this.btnQuery4.TabIndex = 0;
             this.btnQuery4.Text = "Query4";
             this.btnQuery4.UseVisualStyleBackColor = true;
+            this.btnQuery4.Click += new System.EventHandler(this.btnQuery4_Click);
             // 
             // btnQuery8
             // 
@@ -235,7 +238,6 @@ namespace DbFirst
             this.gbResults.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgResults)).EndInit();
             this.gbQueryDetails.ResumeLayout(false);
-            this.gbQueryDetails.PerformLayout();
             this.gbQueries.ResumeLayout(false);
             this.ResumeLayout(false);
 
