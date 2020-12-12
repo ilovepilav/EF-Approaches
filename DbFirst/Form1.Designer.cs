@@ -117,6 +117,7 @@ namespace DbFirst
             this.btnQuery12.TabIndex = 0;
             this.btnQuery12.Text = "Query12";
             this.btnQuery12.UseVisualStyleBackColor = true;
+            this.btnQuery12.Click += new System.EventHandler(this.btnQuery12_Click);
             // 
             // btnQuery11
             // 
@@ -126,6 +127,7 @@ namespace DbFirst
             this.btnQuery11.TabIndex = 0;
             this.btnQuery11.Text = "Query11";
             this.btnQuery11.UseVisualStyleBackColor = true;
+            this.btnQuery11.Click += new System.EventHandler(this.btnQuery11_Click);
             // 
             // btnQuery6
             // 
@@ -145,6 +147,7 @@ namespace DbFirst
             this.btnQuery10.TabIndex = 0;
             this.btnQuery10.Text = "Query10";
             this.btnQuery10.UseVisualStyleBackColor = true;
+            this.btnQuery10.Click += new System.EventHandler(this.btnQuery10_Click);
             // 
             // btnQuery5
             // 
@@ -164,6 +167,7 @@ namespace DbFirst
             this.btnQuery9.TabIndex = 0;
             this.btnQuery9.Text = "Query9";
             this.btnQuery9.UseVisualStyleBackColor = true;
+            this.btnQuery9.Click += new System.EventHandler(this.btnQuery9_Click);
             // 
             // btnQuery4
             // 
@@ -183,6 +187,7 @@ namespace DbFirst
             this.btnQuery8.TabIndex = 0;
             this.btnQuery8.Text = "Query8";
             this.btnQuery8.UseVisualStyleBackColor = true;
+            this.btnQuery8.Click += new System.EventHandler(this.btnQuery8_Click);
             // 
             // btnQuery3
             // 
@@ -202,6 +207,7 @@ namespace DbFirst
             this.btnQuery7.TabIndex = 0;
             this.btnQuery7.Text = "Query7";
             this.btnQuery7.UseVisualStyleBackColor = true;
+            this.btnQuery7.Click += new System.EventHandler(this.btnQuery7_Click);
             // 
             // btnQuery2
             // 
