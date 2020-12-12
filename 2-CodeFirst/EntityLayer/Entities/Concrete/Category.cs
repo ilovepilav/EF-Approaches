@@ -15,5 +15,10 @@ namespace _2_CodeFirst.EntityLayer.Entities.Concrete
         [Required, StringLength(300,ErrorMessage ="Description can't be more than 300 characters long")] // Defined max character length witn StringLength
         public string Description { get; set; }
         public virtual List<Product> Products { get; set; } // Relationship with Products table (One to many)
+
+        public override string ToString() // Able to use name as object's string
+        {
+            return CategoryName;
+        }
     }
 }

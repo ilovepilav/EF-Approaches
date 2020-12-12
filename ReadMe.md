@@ -9,3 +9,7 @@
 	- Implement DbContext and build connection string with using windows authenticaton
 	- Created entity classes and baserepository classes
 	- Designed simple winform for run add/modify/delete processes.
+	- Enabled migrations
+	- Enabled automatic migrations
+	- Created database with update-database command in package manager console
+	- Created CRUD operations in Form1.cs because this project is just to explain how Code First Approach is works. Normally we use design patterns with n-tier architecture.

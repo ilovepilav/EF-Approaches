@@ -29,8 +29,8 @@ namespace _2_CodeFirst
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvCategoryList = new System.Windows.Forms.DataGridView();
+            this.gbList = new System.Windows.Forms.GroupBox();
+            this.dataGridMain = new System.Windows.Forms.DataGridView();
             this.cbTypeChoose = new System.Windows.Forms.ComboBox();
             this.gbAdd = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,37 +47,43 @@ namespace _2_CodeFirst
             this.txtModifyDescription = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoryList)).BeginInit();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.gbList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMain)).BeginInit();
             this.gbAdd.SuspendLayout();
             this.gbModifyDelete.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // gbList
             // 
-            this.groupBox2.Controls.Add(this.dgvCategoryList);
-            this.groupBox2.Location = new System.Drawing.Point(31, 208);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(738, 239);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "List of Categories";
+            this.gbList.Controls.Add(this.dataGridMain);
+            this.gbList.Location = new System.Drawing.Point(31, 208);
+            this.gbList.Name = "gbList";
+            this.gbList.Size = new System.Drawing.Size(738, 239);
+            this.gbList.TabIndex = 5;
+            this.gbList.TabStop = false;
+            this.gbList.Text = "List ";
             // 
-            // dgvCategoryList
+            // dataGridMain
             // 
-            this.dgvCategoryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategoryList.Location = new System.Drawing.Point(7, 20);
-            this.dgvCategoryList.Name = "dgvCategoryList";
-            this.dgvCategoryList.Size = new System.Drawing.Size(716, 256);
-            this.dgvCategoryList.TabIndex = 0;
+            this.dataGridMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMain.Location = new System.Drawing.Point(7, 20);
+            this.dataGridMain.Name = "dataGridMain";
+            this.dataGridMain.Size = new System.Drawing.Size(716, 256);
+            this.dataGridMain.TabIndex = 0;
+            this.dataGridMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMain_CellContentClick);
             // 
             // cbTypeChoose
             // 
             this.cbTypeChoose.FormattingEnabled = true;
+            this.cbTypeChoose.Items.AddRange(new object[] {
+            "Category",
+            "Product"});
             this.cbTypeChoose.Location = new System.Drawing.Point(114, 19);
             this.cbTypeChoose.Name = "cbTypeChoose";
             this.cbTypeChoose.Size = new System.Drawing.Size(121, 21);
             this.cbTypeChoose.TabIndex = 6;
+            this.cbTypeChoose.SelectedIndexChanged += new System.EventHandler(this.cbTypeChoose_SelectedIndexChanged);
             // 
             // gbAdd
             // 
@@ -125,6 +131,7 @@ namespace _2_CodeFirst
             // 
             // gbModifyDelete
             // 
+            this.gbModifyDelete.Controls.Add(this.btnDelete);
             this.gbModifyDelete.Controls.Add(this.btnSubmit);
             this.gbModifyDelete.Controls.Add(this.txtModifyDescription);
             this.gbModifyDelete.Controls.Add(this.cbModifyCategoryPicker);
@@ -210,6 +217,7 @@ namespace _2_CodeFirst
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSubmit
             // 
@@ -217,8 +225,19 @@ namespace _2_CodeFirst
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(121, 23);
             this.btnSubmit.TabIndex = 9;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "Modify";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(112, 143);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(121, 23);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 
@@ -227,11 +246,11 @@ namespace _2_CodeFirst
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbModifyDelete);
             this.Controls.Add(this.gbAdd);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbList);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoryList)).EndInit();
+            this.gbList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMain)).EndInit();
             this.gbAdd.ResumeLayout(false);
             this.gbAdd.PerformLayout();
             this.gbModifyDelete.ResumeLayout(false);
@@ -242,8 +261,8 @@ namespace _2_CodeFirst
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgvCategoryList;
+        private System.Windows.Forms.GroupBox gbList;
+        private System.Windows.Forms.DataGridView dataGridMain;
         private System.Windows.Forms.ComboBox cbTypeChoose;
         private System.Windows.Forms.GroupBox gbAdd;
         private System.Windows.Forms.TextBox txtAddDescription;
@@ -260,6 +279,7 @@ namespace _2_CodeFirst
         private System.Windows.Forms.Label lblModifyType;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
